@@ -2,6 +2,8 @@
 
 This is a custom theme for Obsidian that supports both light and dark color schemes. The theme uses the `Quicksand` and `Cabin` fonts and provides custom colors for headings, bold, and italic text.
 
+![image](image.png)
+
 ## Features
 
 - **Light and Dark Mode**: Automatically switches between light and dark themes based on Obsidian settings.
