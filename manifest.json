@@ -3,5 +3,8 @@
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
 	"author": "Quintavalle Pietro",
-	"authorUrl": "https://obsidian.md"
+	"authorUrl": "https://quinta0.github.io/",
+	"repo": "Quinta0/Aurora-Twilight",
+	"screenshot": "image.png",
+	"modes": ["dark", "light"]
 }
