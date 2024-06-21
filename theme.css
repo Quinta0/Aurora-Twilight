@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:700|Cabin:400');
+
 body {
-	--radius-s: 0px;
-	--radius-m: 0px;
-	--radius-l: 0px;
-	--input-radius: 0px;
-	--tab-radius-active: 0px;
-	--checkbox-radius: 0px;
-	--toggle-radius: 0px;
-	--toggle-thumb-radius: 0px;
-	--slider-thumb-radius: 0px;
+	font-family: 'Cabin', sans-serif;
+	background-color: var(--background-primary);
+	color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bolder;
+}
+
+body {
+	--font-text-theme: Cabin, Quicksand;
+	--radius-s: 8px;
+	--radius-m: 12px;
+	--radius-l: 16px;
+	--input-radius: 12px;
+	--tab-radius-active: 12px;
+	--checkbox-radius: 12px;
+	--toggle-radius: 12px;
+	--toggle-thumb-radius: 12px;
+	--slider-thumb-radius: 12px;
 }
 
 .workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
@@ -23,12 +37,161 @@ svg * {
 
 .menu {
 	padding: var(--size-2-1);
+	border-radius: var(--radius-m);
+	background-color: var(--background-primary);
+	color: var(--text);
 }
 
 .menu-item {
 	padding: var(--size-4-1) var(--size-4-2);
+	border-radius: var(--radius-s);
 }
 
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
+}
+
+.theme-light {
+	--text: rgb(2, 2, 34);
+	--background-primary: rgb(221, 223, 253);
+	--background-secondary: rgb(255, 255, 255);
+	--primary: rgb(7, 136, 82);
+	--secondary: rgb(104, 248, 154);
+	--accent: rgb(181, 208, 73);
+
+	--highlight-hue: 30;
+	--italic-color: #82c0e9;
+	--bold-color: #d86679;
+	--h1-color: #ffc444;
+	--h2-color: #faa250;
+	--h3-color: #f88765;
+	--h4-color: #f88773;
+	--h5-color: #f88773;
+	--h6-color: #f88773;
+}
+
+.theme-dark {
+	--text: rgb(221, 221, 253);
+	--background-primary: rgb(2, 4, 34);
+	--background-secondary: rgb(0, 0, 0);
+	--primary: rgb(119, 248, 194);
+	--secondary: rgb(7, 151, 57);
+	--accent: rgb(155, 182, 47);
+
+	--highlight-hue: 30;
+	--italic-color: #82c0e9;
+	--bold-color: #d86679;
+	--h1-color: #ffc444;
+	--h2-color: #faa250;
+	--h3-color: #f88765;
+	--h4-color: #f88773;
+	--h5-color: #f88773;
+	--h6-color: #f88773;
+}
+
+/* Add border-radius to additional elements */
+.workspace-tab-header {
+	border-radius: var(--radius-m);
+	color: var(--text);
+}
+
+.workspace-tab-header.is-active {
+	border-radius: var(--tab-radius-active);
+}
+
+input, textarea {
+	border-radius: var(--input-radius);
+	background-color: var(--background-secondary);
+	color: var(--text);
+}
+
+.checkbox-container input[type="checkbox"] {
+	border-radius: var(--checkbox-radius);
+}
+
+.toggle-container input[type="checkbox"] + label {
+	border-radius: var(--toggle-radius);
+}
+
+.toggle-container input[type="checkbox"] + label:before {
+	border-radius: var(--toggle-thumb-radius);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	border-radius: var(--slider-thumb-radius);
+}
+
+body.theme-light {
+	background-color: var(--background-primary);
+	color: var(--text);
+}
+
+body.theme-dark {
+	background-color: var(--background-primary);
+	color: var(--text);
+}
+
+/* Custom colors for headings and text styles */
+body.theme-light h1 {
+	color: var(--h1-color);
+}
+
+body.theme-light h2 {
+	color: var(--h2-color);
+}
+
+body.theme-light h3 {
+	color: var(--h3-color);
+}
+
+body.theme-light h4 {
+	color: var(--h4-color);
+}
+
+body.theme-light h5 {
+	color: var(--h5-color);
+}
+
+body.theme-light h6 {
+	color: var(--h6-color);
+}
+
+body.theme-dark h1 {
+	color: var(--h1-color);
+}
+
+body.theme-dark h2 {
+	color: var(--h2-color);
+}
+
+body.theme-dark h3 {
+	color: var(--h3-color);
+}
+
+body.theme-dark h4 {
+	color: var(--h4-color);
+}
+
+body.theme-dark h5 {
+	color: var(--h5-color);
+}
+
+body.theme-dark h6 {
+	color: var(--h6-color);
+}
+
+body.theme-light em {
+	color: var(--italic-color);
+}
+
+body.theme-dark em {
+	color: var(--italic-color);
+}
+
+body.theme-light strong {
+	color: var(--bold-color);
+}
+
+body.theme-dark strong {
+	color: var(--bold-color);
 }
