@@ -1,23 +1,22 @@
-name: Release Obsidian theme
+name: Create Release
 
 on:
   push:
     tags:
-      - "*"
+      - 'v*'
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Create release
+      - name: Create GitHub Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
           tag="${GITHUB_REF#refs/tags/}"
-
           gh release create "$tag" \
             --title="$tag" \
             --generate-notes \
